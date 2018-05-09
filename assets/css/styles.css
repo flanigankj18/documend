@@ -1,0 +1,504 @@
+/*Raleway*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,900');
+
+/* Over-ride inherited body styling which generally has 10-20px padding/margin */
+body {
+  margin:0;
+  padding: 0;
+}
+
+/* Main Text Formatting, think of as paragraph styles use #IDs to specifify if you need to make further adjustments */
+
+h1 {
+  font-size: 72px;
+  line-height: 75px;
+  letter-spacing: 2px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 68px;
+  line-height: 68px;
+  font-weight: 400;
+  color: rgba(255,78,80,1);
+
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+
+}
+
+h4 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  color: #afafaf;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 510px) {
+  h1{
+    font-size: 50px;
+    line-height: 52px;
+  }
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1rem; /* Also can be 16px -- 1rem = 16px */
+}
+
+
+
+/* ---------- Nav Icons ---------- */
+
+/* Logo */
+.logo {
+  position: fixed;
+  top: 0px;
+  left:0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 150ms ease;
+  text-decoration: none;
+  color: black;
+}
+
+.logo:hover {
+  transform: scale3d(1.3,1.3,1.3);
+  transition: transform 250ms ease 50ms;
+}
+
+#logoIcon {
+  width: 96px;
+  fill: white;
+}
+
+@media only screen and (max-width: 640px) {
+  #logoText{
+    display: none;
+  }
+}
+
+/* Menu */
+#menu {
+  position: fixed;
+  top: 28px;
+  right:24px;
+  font-size: 48px;
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 150ms ease;
+}
+
+#menu:hover {
+  transform: scale3d(1.3,1.3,1.3);
+  transition: transform 250ms ease 50ms;
+}
+
+/* Word Mark */
+#slogan {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 1rem; /* Also can be 16px -- 1rem = 16px */
+  position: fixed;
+  bottom: 16px;
+  left: 24px;
+  color: white;
+  z-index: 100;
+  transition: transform 150ms ease;
+}
+
+#slogan:hover {
+  transform: scale3d(1.3,1.3,1.3);
+  transition: transform 250ms ease 50ms;
+}
+
+@media only screen and (max-width: 640px) {
+  #slogan{
+    display: none;
+  }
+}
+
+/* Social Icons */
+
+#social-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 16px;
+  right: 24px;
+  font-size: 24px;
+  z-index: 100;
+}
+
+#social-nav a {
+  margin: 8px 0;
+  color: white;
+  transition: transform 150ms ease;
+}
+
+#social-nav a:hover {
+  transform: scale3d(1.3,1.3,1.3);
+  transition: transform 250ms ease 50ms;
+}
+
+@media only screen and (max-width: 640px) {
+  #mobile-hide {
+    display: none;
+  }
+}
+
+
+/* ---------- section ---------- */
+.section {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  overflow: hidden;
+
+  /*This will center shit dead center*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.section-copy {
+  text-align: left;
+  max-width: 780px;
+  padding: 0 16px;
+}
+
+a #downArrow {
+  color: black;
+  font-size: 48px;
+  position: absolute;
+  bottom: 16px;
+  padding: 2px;
+  transition: transform 150ms ease;
+}
+
+a #downArrow:hover {
+  transform: scale3d(1.3,1.3,1.3);
+  transition: transform 250ms ease;
+}
+
+
+/* ---------- button ---------- */
+a.btn {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  display: inline-block;
+  background-color: rgba(255,255,255,1);
+  border-radius: 150px;
+  padding: 8px 24px;
+  transition: all 150ms ease;
+}
+
+/* The hover effect */
+a.btn:hover {
+  color: rgba(255,78,80,1);
+  transition: all 250ms ease 50ms;
+}
+
+
+
+/* ---------- Section One ---------- */
+#section-one {
+  background-image: url("../img/hero_bg_sect1.jpg");
+  background-position: bottom;
+}
+
+#section-one h1 {
+  color: white;
+}
+
+/* ---------- Section Two ---------- */
+#section-two {
+  background-image: url("../img/hero_bg_sect2.jpg");
+  background-position: top;
+}
+
+#section-two h2 {
+  text-align: center;
+}
+
+.icon-container {
+  max-width: 540px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service-icon {
+  margin-bottom:32px;
+  width: 130px;
+  text-align: center;
+}
+
+.service-icon:nth-child(2) {
+  margin: 0 16px 32px 16px;
+}
+
+.service-icon:nth-child(5) {
+  margin: 0 16px 32px 16px;
+}
+
+.service-icon p {
+  text-transform: uppercase;
+  font-weight:600;
+}
+
+/* ---------- Section Three ---------- */
+#section-three {
+  background: url("../img/section-three-bkg.jpg"), linear-gradient(rgba(255,78,80,1), #F9D423);
+  background-size: cover;
+  background-blend-mode: multiply;
+  padding: 40px 0;
+}
+
+#section-three h1 {
+  text-align: center;
+  color: #fff;
+}
+
+.subscriptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.subscription-option {
+  width: 300px;
+}
+
+.subscription-option .btn {
+  margin-top: 20px;
+}
+
+.price-text {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.price-text-divider {
+  height: 2px;
+  width: 132px;
+  background-color: #fff;
+}
+
+.price-fine-print {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 16px;
+}
+
+/* ---------- Login ---------- */
+#login {
+  background: url("../img/login-photo-bkg.jpg"), linear-gradient(rgba(255,78,80,1), #F9D423);
+  background-size: cover;
+  background-blend-mode: multiply;
+  padding: 0 0 0 0;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+#login h1 {
+  margin-top: 0;
+  color: #fff;
+}
+
+#login .section-copy {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-module {
+  width: 300px;
+  background-color: #fff;
+  padding: 0 60px;
+  box-sizing: border-box;
+  box-shadow: 0 0 24px rgba(0,0,0,.35)
+}
+
+.username {
+  font-size: 12px;
+  color: #afafaf;
+  border-bottom: 1px solid black;
+  padding-bottom: 4px;
+  text-align: left;
+}
+
+.username i {
+  margin-left: 72px;
+  font-size: 16px;
+  float: right;
+}
+
+.login-module .btn {
+  background-color:rgba(255,78,80,1);
+  color: #fff;
+  font-size: 12px;
+  margin: 40px 0;
+}
+
+.login-module .btn:hover, .upload-module .btn:hover {
+  background-color: #F9D423;
+}
+
+.input-fields {
+  margin-top: 160px;
+}
+/* ---------- Add-Files ---------- */
+#add-files {
+  background: url("../img/add-file.jpg"), linear-gradient(rgba(255,78,80,1), #F9D423);
+  background-size: cover;
+  background-blend-mode: multiply;
+  padding: 0 0 0 0;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-files .section-copy {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-module {
+  width: 300px;
+  background-color: #fff;
+  padding: 0 60px;
+  box-sizing: border-box;
+  box-shadow: 0 0 24px rgba(0,0,0,.35)
+}
+
+.file, .notes {
+  font-size: 12px;
+  color: #afafaf;
+  border-top: 1px solid black;
+  padding-top: 8px;
+  text-align: left;
+}
+
+.notes {
+  padding-bottom: 48px;
+  border-bottom: 1px solid black;
+}
+
+#add-icon {
+  transform: translateY(5px);
+}
+
+#upload-icon {
+  font-size: 70px;
+  margin: 40px 0 0 0;
+}
+
+#upload-inputs {
+  margin-top: 60px;
+}
+
+.upload-module .btn {
+  background-color:rgba(255,78,80,1);
+  color: #fff;
+  font-size: 12px;
+  margin: 20px 0 40px 0;
+}
+
+/* ---------- Dashboard ---------- */
+#dashboard {
+  background: url("../img/dashboard.jpg"), linear-gradient(rgba(255,78,80,1), #F9D423);
+  background-size: cover;
+  background-blend-mode: multiply;
+  padding: 0 0 0 0;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+#dashboard .section-copy {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-module {
+  width: 300px;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 0 24px rgba(0,0,0,.35)
+}
+
+.job-status {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.job-status i {
+  color: #afafaf;
+}
+
+.job-status:nth-child(7) {margin-bottom: 60px;}
+
+.job-name {
+  width: 160px;
+  padding: 0;
+  border-bottom: 1px solid black;
+  margin: 0 20px;
+}
+
+.job-name-text {
+  width: 100%;
+  display: block;
+  text-align: left;
+  margin: 0;
+  padding: 0 0 4px 0;
+}
+
+.job-status:nth-child(2) {
+  text-transform: uppercase;
+  transform: scale3d(.7,.7,.7);
+  justify-content: space-between;
+  margin: 0 -27px;
+  margin-top: 40px;
+}
